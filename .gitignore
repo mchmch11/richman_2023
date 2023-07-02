@@ -1,0 +1,6 @@
+*.exe
+*.log
+.idea
+.vscode
+/cmake-build-debug
+/camke-build-debug-wsl
