@@ -1,0 +1,1 @@
+/usr/bin/gcc -g CMakeFiles/richman_2023.dir/main.c.o CMakeFiles/richman_2023.dir/src/test.c.o -o ../bin/richman_2023 

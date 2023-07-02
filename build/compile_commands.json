@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/mcx/cproject/richman_2023/build",
+  "command": "/usr/bin/gcc  -I/home/mcx/cproject/richman_2023/./include -g -std=gnu11 -o CMakeFiles/richman_2023.dir/main.c.o -c /home/mcx/cproject/richman_2023/main.c",
+  "file": "/home/mcx/cproject/richman_2023/main.c"
+},
+{
+  "directory": "/home/mcx/cproject/richman_2023/build",
+  "command": "/usr/bin/gcc  -I/home/mcx/cproject/richman_2023/./include -g -std=gnu11 -o CMakeFiles/richman_2023.dir/src/test.c.o -c /home/mcx/cproject/richman_2023/src/test.c",
+  "file": "/home/mcx/cproject/richman_2023/src/test.c"
+}
+]
