@@ -1,6 +1,8 @@
 import subprocess
 import concurrent.futures
 import random
+import os
+from colorama import Fore, Style
 
 class Test:
     def __init__(self, filePath:str, testName:str, testNum: int, hasIllegal:bool = False, ErrorRate:float = 0.05) -> None:
@@ -12,51 +14,112 @@ class Test:
         self._ErrorRate = ErrorRate # if illegal data is generated, the probability of illegal data generation
         self._weights = [1 - ErrorRate, ErrorRate]
         self._results = None # task results
-        self._colors = ['\033[32m', '\033[31m', '\033[34m', '\033[0m'] # ANSI color: front_green, front_red, front_blue, front_reset
+        self._colors = [Fore.GREEN, Fore.RED, Fore.BLUE, Style.RESET_ALL] # ANSI color: front_green, front_red, front_blue, front_reset
         self.__default_tests()
 
-    def set_tests(self, tests): # customize test
+        if not os.path.exists(self._filePath):
+            self.__print_test_name()
+            print(f"{self._colors[1]}Fail to open file!{self._colors[3]}")
+            exit(1)
+
+    def set_tests(self, tests:str) -> None: # customize test
         self._tests = tests
 
-    def __default_tests(self):
+    def __default_tests(self) -> None:
         self._tests = [
-            {"input":[], "expected_output":[]}
+            {"input":[], "expected_output":""}
         ]
 
-    def __print_test_name(self, _end=''): # print test name
+    def __print_test_name(self, _end='') -> None: # print test name
         print(f'[{self._colors[2]}{self._testName}{self._colors[3]}]', end=_end)
 
-    def __gen_input(self): # generate special test input
+    def __gen_input(self) -> None: # generate special test input
         pass
 
-    def __gen_expected_output(self): # generate special test expected output
+    def __gen_expected_output(self) -> None: # generate special test expected output
         pass
 
-    def gen_test(self): # generate special test
+    def gen_test(self) -> None: # generate special test
         pass
 
-    def __run_test(self, input_data): # run single test
+    def __compare_str(self, str1:str, str2:str) -> tuple[bool, list]: # find the difference of str1, str2
+        if str1 == str2:
+            return True, []
+        
+        output = []
+        i = 0
+        for char1, char2 in zip(str1, str2):
+            if char1 != char2:
+                output.append(i)
+            i += 1
+
+        if i < len(str2):
+            output += [_ for _ in range(i, len(str2))]
+        
+        return False, output
+
+    def __run_test(self, input_data:list) -> str: # run single test
         p = subprocess.Popen([self._filePath], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
 
-        for item in input_data:
-            p.stdin.write(item.encode())
+        for i, item in enumerate(input_data):
+            p.stdin.write((item + '\n').encode())
             p.stdin.flush()
 
-        stdout, _ = p.communicate()
+        _stdout, _ = p.communicate()
 
-        return stdout.decode()
+        return _stdout.decode()
 
-    def create_test_tasks(self): # create test tasks, tesk num = self._testNum
+    def create_test_tasks(self) -> None: # create test tasks, tesk num = self._testNum
         with concurrent.futures.ThreadPoolExecutor() as executor:
             self._results = executor.map(self.__run_test, [test["input"] for test in self._tests])
 
         for test, output in zip(self._tests, self._results):
             self.__print_test_name()
-            if output == test["expected_output"]:
+            isSame, out = self.__compare_str(test["expected_output"], output)
+            if isSame:
                 print(f'{self._colors[0]}Test passed!{self._colors[3]}')
             else:
-                print(f'{self._colors[1]}Test failed! input:{test["input"]}, expected_output:{repr(test["expected_output"])}, actual_output:{repr(output)}{self._colors[3]}')
+                print(f'{self._colors[1]}Test failed!{self._colors[3]} input:{test["input"]}, expected_output:{repr(test["expected_output"])}, actual_output:', end='')
+                
+                # print error char in red color
+                for i, chr in enumerate(output):
+                    if i in out:
+                        print(f"{self._colors[1]}{repr(chr)}{self._colors[3]}", end='')
+                    else:
+                        print(repr(chr), end='')
+                print('')
         
+
+class TestUnitTest(Test):
+    '''
+    unit test test
+    Test whether the unit test module is normal.
+    '''
+
+    def __init__(self, filePath:str, testNum: int, hasIllegal:bool = False, ErrorRate:float = 0.05) -> None:
+        super().__init__(filePath, "TestUnitTest", testNum, hasIllegal, ErrorRate)
+        self.__default_tests()
+        if not hasIllegal:
+            self._weights = [1, 0]
+            self._ErrorRate = 0
+
+    
+    def __default_tests(self) -> None:
+        self._tests = [
+            {"input":["1", "50", "0"], "expected_output": "1\n50\n0\n"},
+        ]
+
+    def gen_test(self) -> None:
+        self._tests = []
+
+        for i in range(self._testNum):
+            rinta = str(random.randint(1, 10))
+            rintb = str(random.randint(1, 10))
+            rintc = str(random.randint(1, 10))
+            self._tests.append({})
+            self._tests[i] = {"input": [rinta, rintb, rintc], "expected_output": rinta + '\n' + rintb + '\n' + rintc + '\n'}
+
+
 
 class TestPointStore(Test): # test for point store
     '''
@@ -73,16 +136,16 @@ class TestPointStore(Test): # test for point store
             self._weights = [1, 0]
             self._ErrorRate = 0
 
-    def __default_tests(self):
+    def __default_tests(self) -> None:
         self._tests = [
-            {"input":["1", "50", "0"], "expected_output":["已购买路障\n点数不足，退出道具房\n"]},
+            {"input":["1", "50", "0"], "expected_output":"已购买路障\n点数不足，退出道具房\n"},
         ]
     
-    def gen_test(self): # generate special test
+    def gen_test(self) -> None: # generate special test
         self.__gen_input()
         self.__gen_expected_output()
 
-    def __gen_input(self):
+    def __gen_input(self) -> None:
         self.tools = [['1', '2', '3'], ['-1', '0', '4', '1.23', '3.44']]
         self.quit = [['F', 'f'], ['a', 'b', '#', 'q', '@']]
         self.points = [(0, 200), (-5, -1)]
@@ -111,7 +174,7 @@ class TestPointStore(Test): # test for point store
 
             self._tests[i]["input"] = [input, str(points), str(tools_number)]
     
-    def __gen_expected_output(self):
+    def __gen_expected_output(self) -> None:
         self._point = [50, 30, 50]
         self._item = ["路障", "机器娃娃", "炸弹"]
 
@@ -144,9 +207,9 @@ class TestDice(Test):
             self._weights = [1, 0]
             self._ErrorRate = 0
 
-    def __default_tests(self):
+    def __default_tests(self) -> None:
         self._tests = [
-            {"input":[], "expected_output":[""]},
+            {"input":[], "expected_output":""}
         ]
 
 
@@ -158,9 +221,9 @@ class TestMap(Test):
             self._weights = [1, 0]
             self._ErrorRate = 0
 
-    def __default_tests(self):
+    def __default_tests(self) -> None:
         self._tests = [
-            {"input":[], "expected_output":[]},
+            {"input":[], "expected_output":""}
         ]
 
 
@@ -172,9 +235,9 @@ class TestBuyLand(Test):
             self._weights = [1, 0]
             self._ErrorRate = 0
 
-    def __default_tests(self):
+    def __default_tests(self) -> None:
         self._tests = [
-            {"input":[], "expected_output":[]},
+            {"input":[], "expected_output":""}
         ]
 
 
@@ -186,28 +249,18 @@ class TestSellingLand(Test):
             self._weights = [1, 0]
             self._ErrorRate = 0
 
-    def __default_tests(self):
+    def __default_tests(self) -> None:
         self._tests = [
-            {"input":[], "expected_output":[]},
+            {"input":[], "expected_output":""}
         ]
         
 
-class TestSellingLand(Test):
-    def __init__(self, filePath:str, testNum: int, hasIllegal:bool = False, ErrorRate:float = 0.05) -> None:
-        super().__init__(filePath, "TestSellingLand", testNum, hasIllegal, ErrorRate)
-        self.__default_tests()
-        if not hasIllegal:
-            self._weights = [1, 0]
-            self._ErrorRate = 0
-
-    def __default_tests(self):
-        self._tests = [
-            {"input":[], "expected_output":[]},
-        ]
-
-
 
 if __name__ == '__main__':
+    a = TestUnitTest("./UnitTestExample.exe", 5)
+    a.gen_test()
+    a.create_test_tasks()
+
     # point store test
     # input:one purchase operation, format: operation present_points present_item_num
     # output: ["点数不足，退出道具房\n", "退出道具房\n", "道具已满\n", "已购买xxx\n", f"已购买xxx\n点数不足，退出道具房\n", "非法输入\n", "点数不足，购买失败\n"]
@@ -216,11 +269,14 @@ if __name__ == '__main__':
 
     # create default tasks
     # the tasks' details, plz see __default_tests function overloading
-    test_store = TestPointStore("./1.exe", 1)
+    test_store = TestPointStore("./UnitTestExample.exe", 1)
     test_store.create_test_tasks()
 
     # create 10 random tasks
     # randomly generated tasks may have poor quality
-    test_store = TestPointStore("./1.exe", 10)
+    test_store = TestPointStore("./UnitTestExample.exe", 10)
     test_store.gen_test()
     test_store.create_test_tasks()
+
+
+    test_store = TestPointStore("./Unaaample.exe", 10)
