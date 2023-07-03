@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/mcx/cproject/richman_2023/build"
+			"value" : "/home/lighthouse/richman_2023/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -167,10 +167,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "C compiler"
 				}
 			],
-			"type" : "FILEPATH",
+			"type" : "STRING",
 			"value" : "/usr/bin/gcc"
 		},
 		{
@@ -475,7 +475,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/mcx/cproject/richman_2023"
+			"value" : "/home/lighthouse/richman_2023"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1011,7 +1011,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/mcx/cproject/richman_2023/build"
+			"value" : "/home/lighthouse/richman_2023/build"
 		},
 		{
 			"name" : "richman_2023_IS_TOP_LEVEL",
@@ -1035,7 +1035,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/mcx/cproject/richman_2023"
+			"value" : "/home/lighthouse/richman_2023"
 		}
 	],
 	"kind" : "cache",

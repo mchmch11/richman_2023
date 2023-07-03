@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "richman_2023::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-richman_2023-Debug-525acb2c7d2aa633a08a.json",
+					"jsonFile" : "target-richman_2023-Debug-910436d945384a8dfd3c.json",
 					"name" : "richman_2023",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/mcx/cproject/richman_2023/build",
-		"source" : "/home/mcx/cproject/richman_2023"
+		"build" : "/home/lighthouse/richman_2023/build",
+		"source" : "/home/lighthouse/richman_2023"
 	},
 	"version" : 
 	{

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mcx/cproject/richman_2023
+CMAKE_SOURCE_DIR = /home/lighthouse/richman_2023
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mcx/cproject/richman_2023/build
+CMAKE_BINARY_DIR = /home/lighthouse/richman_2023/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/richman_2023.dir/depend.make
@@ -69,47 +69,63 @@ include CMakeFiles/richman_2023.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/richman_2023.dir/flags.make
 
-CMakeFiles/richman_2023.dir/main.c.o: CMakeFiles/richman_2023.dir/flags.make
-CMakeFiles/richman_2023.dir/main.c.o: ../main.c
-CMakeFiles/richman_2023.dir/main.c.o: CMakeFiles/richman_2023.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mcx/cproject/richman_2023/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/richman_2023.dir/main.c.o"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/richman_2023.dir/main.c.o -MF CMakeFiles/richman_2023.dir/main.c.o.d -o CMakeFiles/richman_2023.dir/main.c.o -c /home/mcx/cproject/richman_2023/main.c
-
-CMakeFiles/richman_2023.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/richman_2023.dir/main.c.i"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mcx/cproject/richman_2023/main.c > CMakeFiles/richman_2023.dir/main.c.i
-
-CMakeFiles/richman_2023.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/richman_2023.dir/main.c.s"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mcx/cproject/richman_2023/main.c -o CMakeFiles/richman_2023.dir/main.c.s
-
 CMakeFiles/richman_2023.dir/src/test.c.o: CMakeFiles/richman_2023.dir/flags.make
 CMakeFiles/richman_2023.dir/src/test.c.o: ../src/test.c
 CMakeFiles/richman_2023.dir/src/test.c.o: CMakeFiles/richman_2023.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mcx/cproject/richman_2023/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/richman_2023.dir/src/test.c.o"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/richman_2023.dir/src/test.c.o -MF CMakeFiles/richman_2023.dir/src/test.c.o.d -o CMakeFiles/richman_2023.dir/src/test.c.o -c /home/mcx/cproject/richman_2023/src/test.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lighthouse/richman_2023/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/richman_2023.dir/src/test.c.o"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/richman_2023.dir/src/test.c.o -MF CMakeFiles/richman_2023.dir/src/test.c.o.d -o CMakeFiles/richman_2023.dir/src/test.c.o -c /home/lighthouse/richman_2023/src/test.c
 
 CMakeFiles/richman_2023.dir/src/test.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/richman_2023.dir/src/test.c.i"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mcx/cproject/richman_2023/src/test.c > CMakeFiles/richman_2023.dir/src/test.c.i
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lighthouse/richman_2023/src/test.c > CMakeFiles/richman_2023.dir/src/test.c.i
 
 CMakeFiles/richman_2023.dir/src/test.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/richman_2023.dir/src/test.c.s"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mcx/cproject/richman_2023/src/test.c -o CMakeFiles/richman_2023.dir/src/test.c.s
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lighthouse/richman_2023/src/test.c -o CMakeFiles/richman_2023.dir/src/test.c.s
+
+CMakeFiles/richman_2023.dir/src/tool.c.o: CMakeFiles/richman_2023.dir/flags.make
+CMakeFiles/richman_2023.dir/src/tool.c.o: ../src/tool.c
+CMakeFiles/richman_2023.dir/src/tool.c.o: CMakeFiles/richman_2023.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lighthouse/richman_2023/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/richman_2023.dir/src/tool.c.o"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/richman_2023.dir/src/tool.c.o -MF CMakeFiles/richman_2023.dir/src/tool.c.o.d -o CMakeFiles/richman_2023.dir/src/tool.c.o -c /home/lighthouse/richman_2023/src/tool.c
+
+CMakeFiles/richman_2023.dir/src/tool.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/richman_2023.dir/src/tool.c.i"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lighthouse/richman_2023/src/tool.c > CMakeFiles/richman_2023.dir/src/tool.c.i
+
+CMakeFiles/richman_2023.dir/src/tool.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/richman_2023.dir/src/tool.c.s"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lighthouse/richman_2023/src/tool.c -o CMakeFiles/richman_2023.dir/src/tool.c.s
+
+CMakeFiles/richman_2023.dir/main.c.o: CMakeFiles/richman_2023.dir/flags.make
+CMakeFiles/richman_2023.dir/main.c.o: ../main.c
+CMakeFiles/richman_2023.dir/main.c.o: CMakeFiles/richman_2023.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lighthouse/richman_2023/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/richman_2023.dir/main.c.o"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/richman_2023.dir/main.c.o -MF CMakeFiles/richman_2023.dir/main.c.o.d -o CMakeFiles/richman_2023.dir/main.c.o -c /home/lighthouse/richman_2023/main.c
+
+CMakeFiles/richman_2023.dir/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/richman_2023.dir/main.c.i"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lighthouse/richman_2023/main.c > CMakeFiles/richman_2023.dir/main.c.i
+
+CMakeFiles/richman_2023.dir/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/richman_2023.dir/main.c.s"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lighthouse/richman_2023/main.c -o CMakeFiles/richman_2023.dir/main.c.s
 
 # Object files for target richman_2023
 richman_2023_OBJECTS = \
-"CMakeFiles/richman_2023.dir/main.c.o" \
-"CMakeFiles/richman_2023.dir/src/test.c.o"
+"CMakeFiles/richman_2023.dir/src/test.c.o" \
+"CMakeFiles/richman_2023.dir/src/tool.c.o" \
+"CMakeFiles/richman_2023.dir/main.c.o"
 
 # External object files for target richman_2023
 richman_2023_EXTERNAL_OBJECTS =
 
-../bin/richman_2023: CMakeFiles/richman_2023.dir/main.c.o
 ../bin/richman_2023: CMakeFiles/richman_2023.dir/src/test.c.o
+../bin/richman_2023: CMakeFiles/richman_2023.dir/src/tool.c.o
+../bin/richman_2023: CMakeFiles/richman_2023.dir/main.c.o
 ../bin/richman_2023: CMakeFiles/richman_2023.dir/build.make
 ../bin/richman_2023: CMakeFiles/richman_2023.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mcx/cproject/richman_2023/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable ../bin/richman_2023"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lighthouse/richman_2023/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable ../bin/richman_2023"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/richman_2023.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -121,6 +137,6 @@ CMakeFiles/richman_2023.dir/clean:
 .PHONY : CMakeFiles/richman_2023.dir/clean
 
 CMakeFiles/richman_2023.dir/depend:
-	cd /home/mcx/cproject/richman_2023/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mcx/cproject/richman_2023 /home/mcx/cproject/richman_2023 /home/mcx/cproject/richman_2023/build /home/mcx/cproject/richman_2023/build /home/mcx/cproject/richman_2023/build/CMakeFiles/richman_2023.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lighthouse/richman_2023/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lighthouse/richman_2023 /home/lighthouse/richman_2023 /home/lighthouse/richman_2023/build /home/lighthouse/richman_2023/build /home/lighthouse/richman_2023/build/CMakeFiles/richman_2023.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/richman_2023.dir/depend
 

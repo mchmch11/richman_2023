@@ -4,7 +4,7 @@
 # compile C with /usr/bin/gcc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/mcx/cproject/richman_2023/./include
+C_INCLUDES = -I/home/lighthouse/richman_2023/./include
 
 C_FLAGS = -g -std=gnu11
 

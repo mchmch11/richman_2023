@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mcx/cproject/richman_2023
+CMAKE_SOURCE_DIR = /home/lighthouse/richman_2023
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mcx/cproject/richman_2023/build
+CMAKE_BINARY_DIR = /home/lighthouse/richman_2023/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcx/cproject/richman_2023/build/CMakeFiles /home/mcx/cproject/richman_2023/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lighthouse/richman_2023/build/CMakeFiles /home/lighthouse/richman_2023/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mcx/cproject/richman_2023/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lighthouse/richman_2023/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -177,6 +177,30 @@ src/test.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/richman_2023.dir/build.make CMakeFiles/richman_2023.dir/src/test.c.s
 .PHONY : src/test.c.s
 
+src/tool.o: src/tool.c.o
+.PHONY : src/tool.o
+
+# target to build an object file
+src/tool.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/richman_2023.dir/build.make CMakeFiles/richman_2023.dir/src/tool.c.o
+.PHONY : src/tool.c.o
+
+src/tool.i: src/tool.c.i
+.PHONY : src/tool.i
+
+# target to preprocess a source file
+src/tool.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/richman_2023.dir/build.make CMakeFiles/richman_2023.dir/src/tool.c.i
+.PHONY : src/tool.c.i
+
+src/tool.s: src/tool.c.s
+.PHONY : src/tool.s
+
+# target to generate assembly for a file
+src/tool.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/richman_2023.dir/build.make CMakeFiles/richman_2023.dir/src/tool.c.s
+.PHONY : src/tool.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +216,9 @@ help:
 	@echo "... src/test.o"
 	@echo "... src/test.i"
 	@echo "... src/test.s"
+	@echo "... src/tool.o"
+	@echo "... src/tool.i"
+	@echo "... src/tool.s"
 .PHONY : help
 
 

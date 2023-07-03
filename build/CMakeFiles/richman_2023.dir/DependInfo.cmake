@@ -8,8 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/mcx/cproject/richman_2023/main.c" "CMakeFiles/richman_2023.dir/main.c.o" "gcc" "CMakeFiles/richman_2023.dir/main.c.o.d"
-  "/home/mcx/cproject/richman_2023/src/test.c" "CMakeFiles/richman_2023.dir/src/test.c.o" "gcc" "CMakeFiles/richman_2023.dir/src/test.c.o.d"
+  "/home/lighthouse/richman_2023/main.c" "CMakeFiles/richman_2023.dir/main.c.o" "gcc" "CMakeFiles/richman_2023.dir/main.c.o.d"
+  "/home/lighthouse/richman_2023/src/test.c" "CMakeFiles/richman_2023.dir/src/test.c.o" "gcc" "CMakeFiles/richman_2023.dir/src/test.c.o.d"
+  "/home/lighthouse/richman_2023/src/tool.c" "CMakeFiles/richman_2023.dir/src/tool.c.o" "gcc" "CMakeFiles/richman_2023.dir/src/tool.c.o.d"
   )
 
 # Targets to which this target links.

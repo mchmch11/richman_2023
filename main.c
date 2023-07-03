@@ -1,7 +1,9 @@
 #include <stdio.h>
-#include"test.h"
+#include<stdlib.h>
+#include"tool.h"
 int main() {
-    int a=test();
-    printf("Hello, World!\n");
+    Player*player=(Player*)malloc(sizeof(Player));
+    buyTool(player);
+    free(player);
     return 0;
 }
