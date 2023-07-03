@@ -5,6 +5,7 @@ int buyTool(Player* player)
     char ch=' ';
     int i=0;//一次性测试用
     //printf("欢迎来到道具屋，请选择你需要的道具:");
+    scanf("%*s"); //清除缓冲区内的残留数据
     while (ch!='F'&&ch!='f')
     {
         if(i<1)
@@ -12,7 +13,9 @@ int buyTool(Player* player)
         scanf("%c", &ch);
         scanf("%d", &(player->points));
         scanf("%d", &(player->toolnum[0]));
-        fflush(stdin);
+        //为了防误触
+        char input[100];
+        fgets(input, sizeof(input), stdin);
         }
         if(player->points<30)
         {

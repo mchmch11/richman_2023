@@ -1,9 +1,13 @@
-#include <stdio.h>
-#include<stdlib.h>
 #include"tool.h"
+#include"start.h"
+
+
 int main() {
-    Player*player=(Player*)malloc(sizeof(Player));
+    Player*player=start();
+    int num=0;
+    char c=0;
     buyTool(player);
-    free(player);
+    freePlayer(player);
     return 0;
+    
 }

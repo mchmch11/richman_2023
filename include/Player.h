@@ -1,3 +1,6 @@
+#ifndef PLAYER_H
+#define PLAYER_H
+
 typedef struct PLAYER
 {   
     //任务id
@@ -6,4 +9,10 @@ typedef struct PLAYER
     int toolnum[4];
     //任务点数
     int points;
+    //资金
+    int fund;
+    //int prison;
+    struct PLAYER*next;
+
 }Player;
+#endif

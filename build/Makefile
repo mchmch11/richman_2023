@@ -153,6 +153,30 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/richman_2023.dir/build.make CMakeFiles/richman_2023.dir/main.c.s
 .PHONY : main.c.s
 
+src/start.o: src/start.c.o
+.PHONY : src/start.o
+
+# target to build an object file
+src/start.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/richman_2023.dir/build.make CMakeFiles/richman_2023.dir/src/start.c.o
+.PHONY : src/start.c.o
+
+src/start.i: src/start.c.i
+.PHONY : src/start.i
+
+# target to preprocess a source file
+src/start.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/richman_2023.dir/build.make CMakeFiles/richman_2023.dir/src/start.c.i
+.PHONY : src/start.c.i
+
+src/start.s: src/start.c.s
+.PHONY : src/start.s
+
+# target to generate assembly for a file
+src/start.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/richman_2023.dir/build.make CMakeFiles/richman_2023.dir/src/start.c.s
+.PHONY : src/start.c.s
+
 src/test.o: src/test.c.o
 .PHONY : src/test.o
 
@@ -213,6 +237,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/start.o"
+	@echo "... src/start.i"
+	@echo "... src/start.s"
 	@echo "... src/test.o"
 	@echo "... src/test.i"
 	@echo "... src/test.s"

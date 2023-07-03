@@ -1,6 +1,11 @@
 [
 {
   "directory": "/home/lighthouse/richman_2023/build",
+  "command": "/usr/bin/gcc  -I/home/lighthouse/richman_2023/./include -g -std=gnu11 -o CMakeFiles/richman_2023.dir/src/start.c.o -c /home/lighthouse/richman_2023/src/start.c",
+  "file": "/home/lighthouse/richman_2023/src/start.c"
+},
+{
+  "directory": "/home/lighthouse/richman_2023/build",
   "command": "/usr/bin/gcc  -I/home/lighthouse/richman_2023/./include -g -std=gnu11 -o CMakeFiles/richman_2023.dir/src/test.c.o -c /home/lighthouse/richman_2023/src/test.c",
   "file": "/home/lighthouse/richman_2023/src/test.c"
 },
