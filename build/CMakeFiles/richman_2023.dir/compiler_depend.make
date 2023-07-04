@@ -67,6 +67,10 @@ CMakeFiles/richman_2023.dir/main.c.o: ../main.c \
   ../include/update.h \
   ../include/map.h
 
+CMakeFiles/richman_2023.dir/src/map.c.o: ../src/map.c \
+  /usr/include/stdc-predef.h \
+  ../include/map.h
+
 CMakeFiles/richman_2023.dir/src/start.c.o: ../src/start.c \
   /usr/include/stdc-predef.h \
   ../include/start.h \
@@ -367,6 +371,8 @@ CMakeFiles/richman_2023.dir/src/update.c.o: ../src/update.c \
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+
+../src/map.c:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
 

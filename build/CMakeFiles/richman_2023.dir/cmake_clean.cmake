@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "../bin/richman_2023.pdb"
   "CMakeFiles/richman_2023.dir/main.c.o"
   "CMakeFiles/richman_2023.dir/main.c.o.d"
+  "CMakeFiles/richman_2023.dir/src/map.c.o"
+  "CMakeFiles/richman_2023.dir/src/map.c.o.d"
   "CMakeFiles/richman_2023.dir/src/start.c.o"
   "CMakeFiles/richman_2023.dir/src/start.c.o.d"
   "CMakeFiles/richman_2023.dir/src/test.c.o"
