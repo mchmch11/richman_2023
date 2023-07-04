@@ -10,5 +10,5 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 #设置编译的.c文件
 aux_source_directory(./src/ test)
 aux_source_directory(./ main)
-add_executable(richman_2023  ${test} ${main})
+add_executable(richman_2023  ${test} ${main} ./src/update.c)
 

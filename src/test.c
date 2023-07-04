@@ -1,6 +1,1 @@
-#include"test.h"
-#include"Player.h"
-int test()
-{
-    return 0;
-}
+/*test包含测试函数，即set指令以及dump输出指令*/

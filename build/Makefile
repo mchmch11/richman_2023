@@ -225,6 +225,30 @@ src/tool.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/richman_2023.dir/build.make CMakeFiles/richman_2023.dir/src/tool.c.s
 .PHONY : src/tool.c.s
 
+src/update.o: src/update.c.o
+.PHONY : src/update.o
+
+# target to build an object file
+src/update.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/richman_2023.dir/build.make CMakeFiles/richman_2023.dir/src/update.c.o
+.PHONY : src/update.c.o
+
+src/update.i: src/update.c.i
+.PHONY : src/update.i
+
+# target to preprocess a source file
+src/update.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/richman_2023.dir/build.make CMakeFiles/richman_2023.dir/src/update.c.i
+.PHONY : src/update.c.i
+
+src/update.s: src/update.c.s
+.PHONY : src/update.s
+
+# target to generate assembly for a file
+src/update.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/richman_2023.dir/build.make CMakeFiles/richman_2023.dir/src/update.c.s
+.PHONY : src/update.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -246,6 +270,9 @@ help:
 	@echo "... src/tool.o"
 	@echo "... src/tool.i"
 	@echo "... src/tool.s"
+	@echo "... src/update.o"
+	@echo "... src/update.i"
+	@echo "... src/update.s"
 .PHONY : help
 
 

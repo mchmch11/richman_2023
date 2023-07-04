@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/richman_2023.dir/src/test.c.o.d"
   "CMakeFiles/richman_2023.dir/src/tool.c.o"
   "CMakeFiles/richman_2023.dir/src/tool.c.o.d"
+  "CMakeFiles/richman_2023.dir/src/update.c.o"
+  "CMakeFiles/richman_2023.dir/src/update.c.o.d"
 )
 
 # Per-language clean rules from dependency scanning.
