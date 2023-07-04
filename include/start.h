@@ -12,6 +12,7 @@ Player *set_init_role(char *s);
 void initPlayer(Player *player, int id);
 int get_set_fund();
 void freePlayer(Player*p);
-static int PlayerNumber=0;
+int getPlayerNumber();
+static int PlayerNumber;
 
 #endif

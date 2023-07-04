@@ -6,25 +6,28 @@
 #define BLOCK 1
 #define ROBOT 2
 #define BOMB 3
-
+extern mapnode map[MAXLENGTH];
 int main() {
     /*游戏初始化*/
+    initMap();
+    //printMap();
     Player*player=start();
     int round=0;//游戏回合数
     int prid=0;//记录一个回合中玩家都进行数,是0到PlayerNumber-1之间的整数,初始置-1
+    int PlayerNumber=getPlayerNumber();
     //buyTool(player);
+    /*接受指令的代码*/
     char command[100];
     char action[20];
     char arg1[20];
     char arg2[20];
     char arg3[20];
     char arg4[20];
-
+    getchar();
     while (1) {
-        //printf("请输入指令：");
+        
         printMap();
         fgets(command, sizeof(command), stdin);  // 从标准输入读取指令
-
         // 去除指令末尾的换行符
         command[strcspn(command, "\n")] = '\0';
 

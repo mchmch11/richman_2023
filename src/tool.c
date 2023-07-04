@@ -3,31 +3,27 @@
 int buyTool(Player* player)
 {
     char ch=' ';
-    int i=0;//一次性测试用
     //printf("欢迎来到道具屋，请选择你需要的道具:");
-    scanf("%*s"); //清除缓冲区内的残留数据
     while (ch!='F'&&ch!='f')
     {
-        if(i<1)
-        {
-        scanf("%c", &ch);
-        scanf("%d", &(player->points));
-        scanf("%d", &(player->toolnum[0]));
-        //为了防误触
-        char input[100];
-        fgets(input, sizeof(input), stdin);
-        }
+        /*可以购买多个的代码*/
+        /*点数不足*/
         if(player->points<30)
         {
             printf("点数不足，退出道具房\n");
             return 0;
         }
+        /*退出*/
         else if(ch=='F'||ch=='f') break;
+        /*购买单件*/
         else 
-        {   if(i>=1) return 0;
+        {   
+            scanf("%c", &ch);
+            char input[100];
+            fgets(input, sizeof(input), stdin);
+
             buy_one_tool(player,ch);
         }
-        i++;
     }
     printf("退出道具房\n");
     return 0;

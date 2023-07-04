@@ -8,7 +8,7 @@ Player* start()
     Player *player = NULL;
     while (player == NULL)
     {   
-        printf("请输入角色：\n");
+        //printf("请输入角色：\n");
         scanf("%s", s);
         player = set_init_role(s);
     }
@@ -85,7 +85,7 @@ int get_set_fund()
 
     while (1)
     {
-        printf("设置初始资金");
+        //printf("设置初始资金");
         fflush(stdout);
 
         char input[100];
@@ -127,4 +127,8 @@ void freePlayer(Player*p)
         free(p);
         p=q;
     }
+}
+int getPlayerNumber()
+{
+    return PlayerNumber;
 }
