@@ -2,7 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/home/lighthouse/richman_2023/bin/richman_2023"
+			"path" : "D:/IEdownload/ChromeDownload/richman_2023 (3)/richman_2023/bin/richman_2023.exe"
+		},
+		{
+			"path" : "D:/IEdownload/ChromeDownload/richman_2023 (3)/richman_2023/bin/richman_2023.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -43,16 +46,13 @@
 			[
 				{
 					"fragment" : "-g"
-				},
-				{
-					"fragment" : "-std=gnu11"
 				}
 			],
 			"includes" : 
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/home/lighthouse/richman_2023/./include"
+					"path" : "D:/IEdownload/ChromeDownload/richman_2023 (3)/richman_2023/./include"
 				}
 			],
 			"language" : "C",
@@ -72,7 +72,8 @@
 				3,
 				4,
 				5,
-				6
+				6,
+				7
 			]
 		}
 	],
@@ -88,12 +89,16 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"role" : "libraries"
 			}
 		],
 		"language" : "C"
 	},
 	"name" : "richman_2023",
-	"nameOnDisk" : "richman_2023",
+	"nameOnDisk" : "richman_2023.exe",
 	"paths" : 
 	{
 		"build" : ".",
@@ -111,7 +116,8 @@
 				3,
 				4,
 				5,
-				6
+				6,
+				7
 			]
 		}
 	],
@@ -127,6 +133,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "src/Player.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/func.c",
 			"sourceGroupIndex" : 0
 		},
 		{

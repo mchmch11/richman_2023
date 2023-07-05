@@ -1,6 +1,6 @@
-CMakeFiles/richman_2023.dir/src/map.c.o: \
- /home/lighthouse/richman_2023/src/map.c /usr/include/stdc-predef.h \
- /usr/include/stdio.h \
+CMakeFiles/richman_2023.dir/src/func.c.o: \
+ /home/lighthouse/richman_2023/src/func.c /usr/include/stdc-predef.h \
+ /home/lighthouse/richman_2023/./include/func.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -25,4 +25,7 @@ CMakeFiles/richman_2023.dir/src/map.c.o: \
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
  /home/lighthouse/richman_2023/./include/map.h \
  /home/lighthouse/richman_2023/./include/global.h \
- /home/lighthouse/richman_2023/./include/Player.h
+ /home/lighthouse/richman_2023/./include/Player.h /usr/include/string.h \
+ /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+ /usr/include/strings.h

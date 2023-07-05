@@ -1,6 +1,6 @@
 CMakeFiles/richman_2023.dir/src/test.c.obj: \
- C:\Users\26815\Desktop\richman_2023\src\test.c \
- C:/Users/26815/Desktop/richman_2023/include/test.h \
+ D:\IEdownload\ChromeDownload\richman_2023\ (3)\richman_2023\src\test.c \
+ D:/IEdownload/ChromeDownload/richman_2023\ (3)/richman_2023/include/test.h \
  D:/mingw64/x86_64-w64-mingw32/include/stdio.h \
  D:/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
  D:/mingw64/x86_64-w64-mingw32/include/_mingw.h \
@@ -14,4 +14,5 @@ CMakeFiles/richman_2023.dir/src/test.c.obj: \
  D:/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
  D:/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
  D:/mingw64/x86_64-w64-mingw32/include/_mingw_print_pop.h \
- C:/Users/26815/Desktop/richman_2023/include/Player.h
+ D:/IEdownload/ChromeDownload/richman_2023\ (3)/richman_2023/include/Player.h \
+ D:/IEdownload/ChromeDownload/richman_2023\ (3)/richman_2023/include/global.h
