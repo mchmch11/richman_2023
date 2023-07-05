@@ -6,6 +6,7 @@
 // }
 #include <stdio.h>
 #include"map.h"
+#include"Player.h"
 mapnode map[MAX_MAP_NUM];
 int initMap()
 {
@@ -18,8 +19,8 @@ int initMap()
         for(int j=0;j<3;j++)
             map[i].item[j]=0;
         map[i].loc_id=i;
-        map[i].whose='0';
-        map[i].level='0';
+        map[i].whose=0;
+        map[i].level=0;
         map[i].color=0;
         if(i==29) price=500;
         else if(i==35) price=300;
@@ -129,10 +130,10 @@ int updateMapNode(int index)//更新对应节点的显示字符和颜色
     else 
         map[index].ch='0';
     //然后有没有房产
-    if(map[index].whose!='0')
+    if(map[index].whose!=0)
     {
-        map[index].ch=map[index].level;
-        map[index].color=getcolor(map[index].whose);
+        map[index].ch=map[index].level+'0';
+        map[index].color=getcolor(getPlayerch(map[index].whose));
     }
     //有没有道具
     if(map[index].item[0])

@@ -41,23 +41,7 @@ int step(Player*player,int step)
         //TODO
     }
     //判断新地是否有主,有则询问是否购买
-    if((map[player->loc].whose=='0')&&(map[player->loc].price!=-1)&&(player->fund>map[player->loc].price))
-    {
-        char ans[10]="\0";
-        printf("是否购买此空地:\nyes or no\n");
-        scanf("%s",ans);
-        ans[strcspn(ans, "\n")] = '\0';
-        if(strcmp(ans,"yes")==0)
-        {
-            player->fund-=map[player->loc].price;
-            map[player->loc].whose=getPlayerch(player->id);
-            map[player->loc].level='0';
-        }
-    }
-    else if(map[player->loc].whose!='0')
-    {
-        //TODO
-    }
+    buyLand(player, player->loc); 
     updateMapNode(player->loc);
     return 0;
 }

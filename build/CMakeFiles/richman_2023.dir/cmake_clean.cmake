@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/richman_2023.dir/main.c.o.d"
   "CMakeFiles/richman_2023.dir/src/Player.c.o"
   "CMakeFiles/richman_2023.dir/src/Player.c.o.d"
+  "CMakeFiles/richman_2023.dir/src/func.c.o"
+  "CMakeFiles/richman_2023.dir/src/func.c.o.d"
   "CMakeFiles/richman_2023.dir/src/map.c.o"
   "CMakeFiles/richman_2023.dir/src/map.c.o.d"
   "CMakeFiles/richman_2023.dir/src/start.c.o"

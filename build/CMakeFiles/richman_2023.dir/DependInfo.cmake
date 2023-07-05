@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/lighthouse/richman_2023/main.c" "CMakeFiles/richman_2023.dir/main.c.o" "gcc" "CMakeFiles/richman_2023.dir/main.c.o.d"
   "/home/lighthouse/richman_2023/src/Player.c" "CMakeFiles/richman_2023.dir/src/Player.c.o" "gcc" "CMakeFiles/richman_2023.dir/src/Player.c.o.d"
+  "/home/lighthouse/richman_2023/src/func.c" "CMakeFiles/richman_2023.dir/src/func.c.o" "gcc" "CMakeFiles/richman_2023.dir/src/func.c.o.d"
   "/home/lighthouse/richman_2023/src/map.c" "CMakeFiles/richman_2023.dir/src/map.c.o" "gcc" "CMakeFiles/richman_2023.dir/src/map.c.o.d"
   "/home/lighthouse/richman_2023/src/start.c" "CMakeFiles/richman_2023.dir/src/start.c.o" "gcc" "CMakeFiles/richman_2023.dir/src/start.c.o.d"
   "/home/lighthouse/richman_2023/src/test.c" "CMakeFiles/richman_2023.dir/src/test.c.o" "gcc" "CMakeFiles/richman_2023.dir/src/test.c.o.d"

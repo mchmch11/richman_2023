@@ -56,4 +56,6 @@ CMakeFiles/richman_2023.dir/main.c.o: \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /home/lighthouse/richman_2023/./include/test.h \
  /home/lighthouse/richman_2023/./include/update.h \
+ /home/lighthouse/richman_2023/./include/map.h \
+ /home/lighthouse/richman_2023/./include/func.h \
  /home/lighthouse/richman_2023/./include/map.h

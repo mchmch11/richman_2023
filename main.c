@@ -3,6 +3,7 @@
 #include"test.h"
 #include"update.h"
 #include"map.h"
+#include"func.h"
 #define BLOCK 1
 #define ROBOT 2
 #define BOMB 3
@@ -17,7 +18,7 @@ int main() {
     int prid=0;//记录当前玩家的id,是0到PlayerNumber-1之间的整数,初始置0
     int PlayerNumber=getPlayerNumber();//玩家数目
     int i=0,j=0;
-    for(i=0;i<MAX_PLAYER_NUM;i++)
+    for(i=0;i<PlayerNumber;i++)
     {
         if(players[i].alive==1)
             map[0].user[j++]=getPlayerch(players[i].id);
@@ -38,7 +39,7 @@ int main() {
         /*回合数更新*/
         if(prid==0) round+=1;
         if(players[prid].alive!=1){//死亡跳过
-            prid=(prid+1)%MAX_PLAYER_NUM;
+            prid=(prid+1)%PlayerNumber;
             continue;
         }
 
@@ -123,12 +124,16 @@ int main() {
         {
             int rollNumber=get_roll_number();
             step((players+prid),rollNumber);
-            prid=(prid+1)%MAX_PLAYER_NUM;
+            prid=(prid+1)%PlayerNumber;
             //清空缓冲区
             char input[20];
             fgets(input, sizeof(input), stdin);  
             continue;
         } 
+        else if(strcmp(action, "sell") == 0)
+        {
+            sellLand(players+prid, atoi(arg1));
+        }
         else if (strcmp(action, "block") == 0)
         {
             int num=atoi(arg1);

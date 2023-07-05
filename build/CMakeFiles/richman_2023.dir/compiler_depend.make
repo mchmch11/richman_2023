@@ -66,12 +66,49 @@ CMakeFiles/richman_2023.dir/main.c.o: ../main.c \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   ../include/test.h \
   ../include/update.h \
+  ../include/map.h \
+  ../include/func.h \
   ../include/map.h
 
 CMakeFiles/richman_2023.dir/src/Player.c.o: ../src/Player.c \
   /usr/include/stdc-predef.h \
   ../include/Player.h \
   ../include/global.h
+
+CMakeFiles/richman_2023.dir/src/func.c.o: ../src/func.c \
+  /usr/include/stdc-predef.h \
+  ../include/func.h \
+  /usr/include/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/features.h \
+  /usr/include/features-time64.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  ../include/map.h \
+  ../include/global.h \
+  ../include/Player.h \
+  /usr/include/string.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/strings.h
 
 CMakeFiles/richman_2023.dir/src/map.c.o: ../src/map.c \
   /usr/include/stdc-predef.h \
@@ -100,7 +137,8 @@ CMakeFiles/richman_2023.dir/src/map.c.o: ../src/map.c \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
   ../include/map.h \
-  ../include/global.h
+  ../include/global.h \
+  ../include/Player.h
 
 CMakeFiles/richman_2023.dir/src/start.c.o: ../src/start.c \
   /usr/include/stdc-predef.h \
@@ -304,9 +342,13 @@ CMakeFiles/richman_2023.dir/src/update.c.o: ../src/update.c \
 
 ../src/start.c:
 
+../include/func.h:
+
 ../include/test.h:
 
 /usr/include/alloca.h:
+
+../src/func.c:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 

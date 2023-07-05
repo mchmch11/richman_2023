@@ -177,6 +177,30 @@ src/Player.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/richman_2023.dir/build.make CMakeFiles/richman_2023.dir/src/Player.c.s
 .PHONY : src/Player.c.s
 
+src/func.o: src/func.c.o
+.PHONY : src/func.o
+
+# target to build an object file
+src/func.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/richman_2023.dir/build.make CMakeFiles/richman_2023.dir/src/func.c.o
+.PHONY : src/func.c.o
+
+src/func.i: src/func.c.i
+.PHONY : src/func.i
+
+# target to preprocess a source file
+src/func.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/richman_2023.dir/build.make CMakeFiles/richman_2023.dir/src/func.c.i
+.PHONY : src/func.c.i
+
+src/func.s: src/func.c.s
+.PHONY : src/func.s
+
+# target to generate assembly for a file
+src/func.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/richman_2023.dir/build.make CMakeFiles/richman_2023.dir/src/func.c.s
+.PHONY : src/func.c.s
+
 src/map.o: src/map.c.o
 .PHONY : src/map.o
 
@@ -312,6 +336,9 @@ help:
 	@echo "... src/Player.o"
 	@echo "... src/Player.i"
 	@echo "... src/Player.s"
+	@echo "... src/func.o"
+	@echo "... src/func.i"
+	@echo "... src/func.s"
 	@echo "... src/map.o"
 	@echo "... src/map.i"
 	@echo "... src/map.s"
