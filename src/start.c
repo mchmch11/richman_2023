@@ -102,7 +102,7 @@ int get_set_fund()
 
     while (1)
     {
-        //printf("设置初始资金");
+        printf("设置初始资金");
         fflush(stdout);
 
         char input[100];
