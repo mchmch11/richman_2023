@@ -6,9 +6,10 @@
 // }
 #include <stdio.h>
 #include"map.h"
-mapnode map[MAXLENGTH];
+mapnode map[MAX_MAP_NUM];
 int initMap()
 {
+    int price=200;
     for(int i=0;i<70;i++)
     {
         map[i].ch='0';
@@ -17,19 +18,28 @@ int initMap()
         for(int j=0;j<3;j++)
             map[i].item[j]=0;
         map[i].loc_id=i;
-        map[i].whom='0';
+        map[i].whose='0';
         map[i].level='0';
         map[i].color=0;
+        if(i==29) price=500;
+        else if(i==35) price=300;
+        map[i].price=price;
     }
     map[HOSPITAL].ch='H';
+    map[HOSPITAL].price=-1;
     map[TOOLROOM].ch='T';
+    map[TOOLROOM].price=-1;
     map[GIFTROOM].ch='G';
+    map[GIFTROOM].price=-1;
     map[PRISON].ch='P';
+    map[PRISON].price=-1;
     map[MAGICROOM].ch='M';
+    map[MAGICROOM].price=-1;
     map[0].ch='S';
-    for(int i=MAGICROOM+1;i<MAXLENGTH;i++)
+    for(int i=MAGICROOM+1;i<MAX_MAP_NUM;i++)
     {
         map[i].ch='$';
+        map[i].price=-1;
     }
 }
 
@@ -82,7 +92,7 @@ int printMap() //to test
             else 
             {
                 if(column==0)
-                printNode(map[MAXLENGTH-row]);
+                printNode(map[MAX_MAP_NUM-row]);
                 else if(column==length-1)
                 printNode(map[length-1+row]);
                 else
@@ -119,10 +129,10 @@ int updateMapNode(int index)//更新对应节点的显示字符和颜色
     else 
         map[index].ch='0';
     //然后有没有房产
-    if(map[index].whom!='0')
+    if(map[index].whose!='0')
     {
         map[index].ch=map[index].level;
-        map[index].color=getcolor(map[index].whom);
+        map[index].color=getcolor(map[index].whose);
     }
     //有没有道具
     if(map[index].item[0])

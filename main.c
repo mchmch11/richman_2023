@@ -6,17 +6,24 @@
 #define BLOCK 1
 #define ROBOT 2
 #define BOMB 3
-extern mapnode map[MAXLENGTH];
+extern mapnode map[MAX_MAP_NUM];//地图
+Player players[MAX_PLAYER_NUM]; //玩家
 int main() {
     /*游戏初始化*/
     initMap();
     //printMap();
-    Player*player=start();
-    int round=0;//游戏回合数
-    int prid=0;//记录一个回合中玩家都进行数,是0到PlayerNumber-1之间的整数,初始置-1
-    int PlayerNumber=getPlayerNumber();
+    start(players);
+    int round=0;//游戏回合数，
+    int prid=0;//记录当前玩家的id,是0到PlayerNumber-1之间的整数,初始置0
+    int PlayerNumber=getPlayerNumber();//玩家数目
+    for(int i=0;i<PlayerNumber;i++)
+    {
+        map[0].user[i]=getPlayerch(players[i].id);
+    }
+    updateMapNode(0);
     //buyTool(player);
-    /*接受指令的代码*/
+
+    /*接受指令的变量*/
     char command[100];
     char action[20];
     char arg1[20];
@@ -24,18 +31,33 @@ int main() {
     char arg3[20];
     char arg4[20];
     getchar();
+
     while (1) {
-        
+        /*回合数更新*/
+        if(prid==0) round+=1;
+        if(players[prid].alive!=1){//死亡跳过
+            prid=(prid+1)%PlayerNumber;
+            continue;
+        }
+
+        /*打印地图*/
         printMap();
-        fgets(command, sizeof(command), stdin);  // 从标准输入读取指令
+
+        /*指令输入*/
+        printf("输入用户命令\n");
+        //重置指令
+        strcpy(command,"\n");
+        strcpy(action,"\0");
+        // 从标准输入读取指令
+        fgets(command, sizeof(command), stdin);  
         // 去除指令末尾的换行符
         command[strcspn(command, "\n")] = '\0';
-
         // 解析指令和参数
         sscanf(command, "%s %s %s %s %s", action, arg1,arg2,arg3,arg4);
 
         /* 根据解析的指令和参数执行相应的操作*/
         /*测试用指令*/
+        //TIPs:  可以下面的set指令可以更换函数名字,我这里只是写了一个大概
         if (strcmp(action, "set") == 0) //set指令
         {
             if(strcmp(arg1,"money")==0)
@@ -64,11 +86,11 @@ int main() {
             }
             else if(strcmp(arg1,"bomb")==0)
             {
-                setBomb(player,arg2);
+                setBomb(players,arg2);
             }
             else if(strcmp(arg1,"barrier")==0)
             {
-                setBarrier(player,arg2);
+                setBarrier(players,arg2);
             }
             else if(strcmp(arg1,"pos")==0)
             {
@@ -88,10 +110,8 @@ int main() {
             }
         } 
         else if (strcmp(action, "step") == 0) {//step指令
-            step(player,atoi(arg1));
-            changePlayer(player);
+            step((players+prid),atoi(arg1));
             prid=(prid+1)%PlayerNumber;
-            if(prid==0) round++;
             continue;
         }
 
@@ -99,19 +119,16 @@ int main() {
         else if (strcmp(action, "roll") == 0) 
         {
             int rollNumber=get_roll_number();
-            step(player,rollNumber);
-            //立即换下一个角色
-            changePlayer(player);
+            step((players+prid),rollNumber);
             prid=(prid+1)%PlayerNumber;
-            if(prid==0) round++;
             continue;
         } 
         else if (strcmp(action, "block") == 0)
         {
             int num=atoi(arg1);
-            if(player->toolnum[BLOCK]>0)
+            if(players[prid].toolnum[BLOCK]>0)
             {
-                putBlock(player,num);//设置障碍，前后10步并放在不是玩家的位置上
+                putBlock((players+prid),num);//设置障碍，前后10步并放在不是玩家的位置上
             }
             else
             {
@@ -120,9 +137,9 @@ int main() {
         }
         else if (strcmp(action, "robot") == 0)
         {
-            if(player->toolnum[ROBOT]>0)
+            if(players[prid].toolnum[ROBOT]>0)
             {
-                robotClear(player);//设置障碍，前后10步并放在不是玩家的位置上
+                robotClear(players+prid);//设置障碍，前后10步并放在不是玩家的位置上
             }
             else
             {
@@ -132,9 +149,9 @@ int main() {
         else if (strcmp(action, "block") == 0)
         {
             int num=atoi(arg1);
-            if(player->toolnum[BOMB]>0)
+            if(players[prid].toolnum[BOMB]>0)
             {
-                putBomb(player,num);//设置障碍，前后10步并放在不是玩家的位置上
+                putBomb(players+prid,num);//设置障碍，前后10步并放在不是玩家的位置上
             }
             else
             {
@@ -146,7 +163,6 @@ int main() {
             printf("未知指令，请重新输入\n");
         }
     }
-    freePlayer(player);
     return 0;
     
 }

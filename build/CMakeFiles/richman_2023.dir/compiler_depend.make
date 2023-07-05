@@ -5,6 +5,7 @@ CMakeFiles/richman_2023.dir/main.c.o: ../main.c \
   /usr/include/stdc-predef.h \
   ../include/tool.h \
   ../include/Player.h \
+  ../include/global.h \
   /usr/include/stdio.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/features.h \
@@ -67,6 +68,11 @@ CMakeFiles/richman_2023.dir/main.c.o: ../main.c \
   ../include/update.h \
   ../include/map.h
 
+CMakeFiles/richman_2023.dir/src/Player.c.o: ../src/Player.c \
+  /usr/include/stdc-predef.h \
+  ../include/Player.h \
+  ../include/global.h
+
 CMakeFiles/richman_2023.dir/src/map.c.o: ../src/map.c \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
@@ -93,12 +99,14 @@ CMakeFiles/richman_2023.dir/src/map.c.o: ../src/map.c \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  ../include/map.h
+  ../include/map.h \
+  ../include/global.h
 
 CMakeFiles/richman_2023.dir/src/start.c.o: ../src/start.c \
   /usr/include/stdc-predef.h \
   ../include/start.h \
   ../include/Player.h \
+  ../include/global.h \
   /usr/include/string.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/features.h \
@@ -155,7 +163,8 @@ CMakeFiles/richman_2023.dir/src/start.c.o: ../src/start.c \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  ../include/global.h
 
 CMakeFiles/richman_2023.dir/src/test.c.o: ../src/test.c \
   /usr/include/stdc-predef.h \
@@ -184,12 +193,14 @@ CMakeFiles/richman_2023.dir/src/test.c.o: ../src/test.c \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  ../include/Player.h
+  ../include/Player.h \
+  ../include/global.h
 
 CMakeFiles/richman_2023.dir/src/tool.c.o: ../src/tool.c \
   /usr/include/stdc-predef.h \
   ../include/tool.h \
   ../include/Player.h \
+  ../include/global.h \
   /usr/include/stdio.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/features.h \
@@ -219,7 +230,8 @@ CMakeFiles/richman_2023.dir/src/update.c.o: ../src/update.c \
   /usr/include/stdc-predef.h \
   ../include/update.h \
   ../include/Player.h \
-  ../include/Player.h \
+  ../include/global.h \
+  ../include/map.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/features.h \
@@ -277,7 +289,9 @@ CMakeFiles/richman_2023.dir/src/update.c.o: ../src/update.c \
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/string.h \
+  /usr/include/strings.h
 
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
@@ -296,6 +310,8 @@ CMakeFiles/richman_2023.dir/src/update.c.o: ../src/update.c \
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
+/usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
+
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
@@ -313,6 +329,8 @@ CMakeFiles/richman_2023.dir/src/update.c.o: ../src/update.c \
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+../src/Player.c:
 
 ../include/Player.h:
 
@@ -350,6 +368,8 @@ CMakeFiles/richman_2023.dir/src/update.c.o: ../src/update.c \
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
+../include/global.h:
+
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
 /usr/include/stdc-predef.h:
@@ -362,8 +382,6 @@ CMakeFiles/richman_2023.dir/src/update.c.o: ../src/update.c \
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
-../include/start.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /usr/include/stdlib.h:
@@ -373,6 +391,8 @@ CMakeFiles/richman_2023.dir/src/update.c.o: ../src/update.c \
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
 ../include/tool.h:
+
+../include/start.h:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
@@ -391,8 +411,6 @@ CMakeFiles/richman_2023.dir/src/update.c.o: ../src/update.c \
 /usr/include/endian.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 

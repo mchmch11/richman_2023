@@ -6,6 +6,7 @@ CMakeFiles/richman_2023.dir/main.c.o
  /usr/include/stdc-predef.h
  /home/lighthouse/richman_2023/include/tool.h
  /home/lighthouse/richman_2023/include/Player.h
+ /home/lighthouse/richman_2023/include/global.h
  /usr/include/stdio.h
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h
  /usr/include/features.h
@@ -68,6 +69,12 @@ CMakeFiles/richman_2023.dir/main.c.o
  /home/lighthouse/richman_2023/include/update.h
  /home/lighthouse/richman_2023/include/map.h
 
+CMakeFiles/richman_2023.dir/src/Player.c.o
+ /home/lighthouse/richman_2023/src/Player.c
+ /usr/include/stdc-predef.h
+ /home/lighthouse/richman_2023/include/Player.h
+ /home/lighthouse/richman_2023/include/global.h
+
 CMakeFiles/richman_2023.dir/src/map.c.o
  /home/lighthouse/richman_2023/src/map.c
  /usr/include/stdc-predef.h
@@ -96,12 +103,14 @@ CMakeFiles/richman_2023.dir/src/map.c.o
  /usr/include/x86_64-linux-gnu/bits/floatn.h
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h
  /home/lighthouse/richman_2023/include/map.h
+ /home/lighthouse/richman_2023/include/global.h
 
 CMakeFiles/richman_2023.dir/src/start.c.o
  /home/lighthouse/richman_2023/src/start.c
  /usr/include/stdc-predef.h
  /home/lighthouse/richman_2023/include/start.h
  /home/lighthouse/richman_2023/include/Player.h
+ /home/lighthouse/richman_2023/include/global.h
  /usr/include/string.h
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h
  /usr/include/features.h
@@ -159,6 +168,7 @@ CMakeFiles/richman_2023.dir/src/start.c.o
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /home/lighthouse/richman_2023/include/global.h
 
 CMakeFiles/richman_2023.dir/src/test.c.o
  /home/lighthouse/richman_2023/src/test.c
@@ -189,12 +199,14 @@ CMakeFiles/richman_2023.dir/src/test.c.o
  /usr/include/x86_64-linux-gnu/bits/floatn.h
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h
  /home/lighthouse/richman_2023/include/Player.h
+ /home/lighthouse/richman_2023/include/global.h
 
 CMakeFiles/richman_2023.dir/src/tool.c.o
  /home/lighthouse/richman_2023/src/tool.c
  /usr/include/stdc-predef.h
  /home/lighthouse/richman_2023/include/tool.h
  /home/lighthouse/richman_2023/include/Player.h
+ /home/lighthouse/richman_2023/include/global.h
  /usr/include/stdio.h
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h
  /usr/include/features.h
@@ -225,7 +237,8 @@ CMakeFiles/richman_2023.dir/src/update.c.o
  /usr/include/stdc-predef.h
  /home/lighthouse/richman_2023/include/update.h
  /home/lighthouse/richman_2023/include/Player.h
- /home/lighthouse/richman_2023/include/Player.h
+ /home/lighthouse/richman_2023/include/global.h
+ /home/lighthouse/richman_2023/include/map.h
  /usr/include/stdlib.h
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h
  /usr/include/features.h
@@ -284,4 +297,6 @@ CMakeFiles/richman_2023.dir/src/update.c.o
  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h
+ /usr/include/string.h
+ /usr/include/strings.h
 

@@ -6,9 +6,9 @@
 #include<ctype.h>
 #include<stdlib.h>
 #include<stdio.h>
-Player* start();
+int  start(Player *player);
 void set_init_fund(Player *player, int fund);
-Player *set_init_role(char *s);
+int set_init_role(Player *player,char *s);
 void initPlayer(Player *player, int id);
 int get_set_fund();
 void freePlayer(Player*p);

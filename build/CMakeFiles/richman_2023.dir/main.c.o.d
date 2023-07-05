@@ -1,7 +1,8 @@
 CMakeFiles/richman_2023.dir/main.c.o: \
  /home/lighthouse/richman_2023/main.c /usr/include/stdc-predef.h \
  /home/lighthouse/richman_2023/./include/tool.h \
- /home/lighthouse/richman_2023/./include/Player.h /usr/include/stdio.h \
+ /home/lighthouse/richman_2023/./include/Player.h \
+ /home/lighthouse/richman_2023/./include/global.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \

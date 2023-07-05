@@ -153,6 +153,30 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/richman_2023.dir/build.make CMakeFiles/richman_2023.dir/main.c.s
 .PHONY : main.c.s
 
+src/Player.o: src/Player.c.o
+.PHONY : src/Player.o
+
+# target to build an object file
+src/Player.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/richman_2023.dir/build.make CMakeFiles/richman_2023.dir/src/Player.c.o
+.PHONY : src/Player.c.o
+
+src/Player.i: src/Player.c.i
+.PHONY : src/Player.i
+
+# target to preprocess a source file
+src/Player.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/richman_2023.dir/build.make CMakeFiles/richman_2023.dir/src/Player.c.i
+.PHONY : src/Player.c.i
+
+src/Player.s: src/Player.c.s
+.PHONY : src/Player.s
+
+# target to generate assembly for a file
+src/Player.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/richman_2023.dir/build.make CMakeFiles/richman_2023.dir/src/Player.c.s
+.PHONY : src/Player.c.s
+
 src/map.o: src/map.c.o
 .PHONY : src/map.o
 
@@ -285,6 +309,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/Player.o"
+	@echo "... src/Player.i"
+	@echo "... src/Player.s"
 	@echo "... src/map.o"
 	@echo "... src/map.i"
 	@echo "... src/map.s"
