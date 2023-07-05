@@ -51,7 +51,7 @@ int step(Player*player,int step)
         {
             player->fund-=map[player->loc].price;
             map[player->loc].whose=getPlayerch(player->id);
-            map[player->loc].level='1';
+            map[player->loc].level='0';
         }
     }
     else if(map[player->loc].whose!='0')

@@ -50,9 +50,11 @@ int set_init_role(Player*players,char*s)
     }
     else{
         PlayerNumber=num;
-        for(int i=0;i<num;i++)
+        for(int i=0;i<MAX_PLAYER_NUM;i++)
         {
-        initPlayer((players+i),*(s+i)-'0');
+            int id=*(s)-'0';
+            if(id-1!=i) {(players+i)->alive=0;}
+            else {initPlayer((players+i),id);s++;}
         }
         return 0;
     }

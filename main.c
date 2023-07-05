@@ -16,9 +16,11 @@ int main() {
     int round=0;//游戏回合数，
     int prid=0;//记录当前玩家的id,是0到PlayerNumber-1之间的整数,初始置0
     int PlayerNumber=getPlayerNumber();//玩家数目
-    for(int i=0;i<PlayerNumber;i++)
+    int i=0,j=0;
+    for(i=0;i<MAX_PLAYER_NUM;i++)
     {
-        map[0].user[i]=getPlayerch(players[i].id);
+        if(players[i].alive==1)
+            map[0].user[j++]=getPlayerch(players[i].id);
     }
     updateMapNode(0);
     //buyTool(player);
@@ -36,7 +38,7 @@ int main() {
         /*回合数更新*/
         if(prid==0) round+=1;
         if(players[prid].alive!=1){//死亡跳过
-            prid=(prid+1)%PlayerNumber;
+            prid=(prid+1)%MAX_PLAYER_NUM;
             continue;
         }
 
@@ -45,9 +47,7 @@ int main() {
 
         /*指令输入*/
         printf("输入用户命令\n");
-        //重置指令
-        strcpy(command,"\n");
-        strcpy(action,"\0");
+        
         // 从标准输入读取指令
         fgets(command, sizeof(command), stdin);  
         // 去除指令末尾的换行符
@@ -111,7 +111,10 @@ int main() {
         } 
         else if (strcmp(action, "step") == 0) {//step指令
             step((players+prid),atoi(arg1));
-            prid=(prid+1)%PlayerNumber;
+            prid=(prid+1)%MAX_PLAYER_NUM;
+            //清空缓冲区
+            char input[20];
+            fgets(input, sizeof(input), stdin);  
             continue;
         }
 
@@ -120,7 +123,10 @@ int main() {
         {
             int rollNumber=get_roll_number();
             step((players+prid),rollNumber);
-            prid=(prid+1)%PlayerNumber;
+            prid=(prid+1)%MAX_PLAYER_NUM;
+            //清空缓冲区
+            char input[20];
+            fgets(input, sizeof(input), stdin);  
             continue;
         } 
         else if (strcmp(action, "block") == 0)
